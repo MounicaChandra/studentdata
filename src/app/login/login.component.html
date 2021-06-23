@@ -1,0 +1,13 @@
+<p>login works!</p>
+
+<form #loginForm="ngForm">
+    <div>
+        <input type="emai" placeholder="Enter Email Address" [(ngModel)]="email" name="email" />
+        <input type="password" placeholder="Type Password" [(ngModel)]="password" name="password" />
+        <button (click)="signIn(loginForm)">SignIn</button>
+        <button (click)="getCountries()">country</button>
+    </div>
+</form>
+<div *ngFor=" let x of countryArray">
+    <li>{{x.country}}</li>
+</div>

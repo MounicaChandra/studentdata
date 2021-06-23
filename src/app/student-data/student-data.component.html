@@ -1,0 +1,29 @@
+<p>student-data works!</p>
+<p>Name:</p>
+<input type="text" [(ngModel)]="name" />
+<br><br>
+<p>Id:</p>
+<input type="text" [(ngModel)]="id" />
+<br><br>
+<p>Class:</p>
+<input type="text" [(ngModel)]="class" />
+<br><br>
+<p>Subject:</p>
+<input type="text" [(ngModel)]="subject" />
+<br><br>
+<button (click)="add()">Add</button>
+
+<table *ngFor="let data of studentData">
+    <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Class</th>
+        <th>Subject</th>
+    </tr>
+    <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.id}}</td>
+        <td>{{data.class}}</td>
+        <td>{{data.subject}}</td>
+    </tr>
+</table>
